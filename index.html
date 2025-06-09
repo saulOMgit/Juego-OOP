@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aventuras POO</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Juego POO</h1>
-    <div id="puntos">Puntos: 0</div>
+    <title>Juego de Conducción</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <h1>Juego de Conducción</h1>
+    <div id="puntos">Tiempo: 0 s</div>
     <div id="game-container"></div>
-    <script type="module" src="main.js"></script>
-  </body>
+
+    <!-- Modal -->
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2>¡Game Over!</h2>
+            <p id="final-score">Tiempo sobrevivido: 0 s</p>
+            <button id="restart-button">Reiniciar</button>
+        </div>
+    </div>
+    <div id="mobile-controls">
+        <button id="left-button">⬅️</button>
+        <button id="right-button">➡️</button>
+    </div>
+    <button id="start-button">Iniciar Juego</button>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
 </html>
