@@ -17,7 +17,10 @@ body {
   height: 600px;
   margin: 20px auto;
   border: 5px solid #6d6d6d;
-  background: #fff;
+  /* background: #fff; */
+    background-image: url(../img/fondoCarrera.png);
+    background-size: cover;
+
   overflow: hidden;
   border-radius: 20px;
 }
@@ -26,7 +29,8 @@ body {
   position: absolute;
   width: 50px;
   height: 80px;
-  background-color: #07a07c;
+  /* background-color: #07a07c; */
+  background-image: url(../img/DkKart.png);
   border-radius: 10px;
   bottom: 20px;
   left: 50%;
@@ -37,7 +41,9 @@ body {
   position: absolute;
   width: 50px;
   height: 80px;
-  background-color: red;
+  /* background-color: red; */
+  background-image: url(../img/obstaculo.png);
+
   border-radius: 10px;
 }
 
