@@ -161,18 +161,22 @@ const rightButton = document.getElementById("right-button");
 
 if (leftButton && rightButton) {
     // Touch y Click para Izquierda
-    leftButton.addEventListener("touchstart", () => {
+    leftButton.addEventListener("touchstart", (e) => {
+        e.preventDefault();
         juego.personaje.mover({ key: "ArrowLeft" });
     });
-    leftButton.addEventListener("click", () => {
+    leftButton.addEventListener("click", (e) => {
+        e.preventDefault();
         juego.personaje.mover({ key: "ArrowLeft" });
     });
 
     // Touch y Click para Derecha
-    rightButton.addEventListener("touchstart", () => {
+    rightButton.addEventListener("touchstart", (e) => {
+        e.preventDefault();
         juego.personaje.mover({ key: "ArrowRight" });
     });
-    rightButton.addEventListener("click", () => {
+    rightButton.addEventListener("click", (e) => {
+        e.preventDefault();
         juego.personaje.mover({ key: "ArrowRight" });
     });
 }
