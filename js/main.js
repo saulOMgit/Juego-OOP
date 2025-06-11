@@ -79,7 +79,7 @@ class Game {
 
 class Personaje {
     constructor() {
-        this.x = 175; // Centro aproximado para 400px de ancho
+        this.x = 200; 
         this.y = 500;
         this.width = 50;
         this.height = 80;
@@ -100,11 +100,11 @@ class Personaje {
 
     actualizarPosicion() {
         this.element.style.left = `${this.x}px`;
-        this.element.style.bottom = `20px`;
+        this.element.style.top = `${this.y}px`;  // 👈 Cambiado a top
     }
 
     colisionaCon(objeto) {
-        const buffer = 10; // margen de tolerancia
+        const buffer = 10;
         const personajeLeft = this.x + buffer;
         const personajeRight = this.x + this.width - buffer;
         const personajeTop = this.y + buffer;
@@ -180,3 +180,32 @@ if (leftButton && rightButton) {
 document.body.addEventListener("touchmove", function(e) {
     e.preventDefault();
 }, { passive: false });
+
+
+// Música (placeholder)
+const musicButton = document.getElementById("music-button");
+let musicPlaying = false;
+
+musicButton.addEventListener("click", () => {
+    musicPlaying = !musicPlaying;
+    if (musicPlaying) {
+        musicButton.textContent = "🔇 Música";
+        // Aquí llama a tu función de reproducir música
+    } else {
+        musicButton.textContent = "🎵 Música";
+        // Aquí llama a tu función de pausar/detener música
+    }
+});
+
+// Modal de instrucciones
+const infoButton = document.getElementById("info-button");
+const infoModal = document.getElementById("info-modal");
+const closeInfoButton = document.getElementById("close-info-button");
+
+infoButton.addEventListener("click", () => {
+    infoModal.style.display = "flex";
+});
+
+closeInfoButton.addEventListener("click", () => {
+    infoModal.style.display = "none";
+});

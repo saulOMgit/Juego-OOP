@@ -15,6 +15,22 @@
 
 <body>
     <h1>Juego de Conducción</h1>
+    <div id="top-controls">
+        <button id="music-button">🎵 Música</button>
+        <button id="info-button">ℹ️ Info</button>
+    </div>
+
+    <!-- Modal de instrucciones -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <h2>Instrucciones del Juego</h2>
+            <p>
+                Usa las flechas izquierda y derecha (o los botones) para esquivar obstáculos.
+                ¡Sobrevive el mayor tiempo posible!
+            </p>
+            <button id="close-info-button">Cerrar</button>
+        </div>
+    </div>
     <div id="puntos">Tiempo: 0 s</div>
     <div id="game-container"></div>
 

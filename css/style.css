@@ -96,3 +96,24 @@ body {
 #mobile-controls button:active {
   background-color: #058c6b;
 }
+
+#top-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#top-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#top-controls button:active {
+    background-color: #555;
+}
