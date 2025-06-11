@@ -79,7 +79,7 @@ class Game {
 
 class Personaje {
     constructor() {
-        this.x = 200; 
+        this.x = 200;
         this.y = 500;
         this.width = 50;
         this.height = 80;
@@ -177,23 +177,25 @@ if (leftButton && rightButton) {
     });
 }
 // Evitar scroll vertical en móviles al tocar botones
-document.body.addEventListener("touchmove", function(e) {
+document.body.addEventListener("touchmove", function (e) {
     e.preventDefault();
 }, { passive: false });
 
 
 // Música (placeholder)
 const musicButton = document.getElementById("music-button");
+const myAudio = document.getElementById("myAudio");
+myAudio.volume = 0.4;
 let musicPlaying = false;
 
 musicButton.addEventListener("click", () => {
     musicPlaying = !musicPlaying;
     if (musicPlaying) {
         musicButton.textContent = "🔇 Música";
-        // Aquí llama a tu función de reproducir música
+        myAudio.play();
     } else {
         musicButton.textContent = "🎵 Música";
-        // Aquí llama a tu función de pausar/detener música
+        myAudio.stop();
     }
 });
 

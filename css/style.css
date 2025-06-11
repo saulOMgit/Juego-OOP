@@ -2,12 +2,15 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow: hidden;
-  background-color: #b8b8b8;
+  background: #833AB4;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  font-family: "Racing Sans One",Arial, Helvetica, sans-serif;
+  color: #000019;
 }
 
 #game-container {
@@ -18,8 +21,8 @@ body {
   margin: 20px auto;
   border: 5px solid #6d6d6d;
   /* background: #fff; */
-    background-image: url(../img/fondoCarrera.png);
-    background-size: cover;
+  background-image: url(../img/fondoCarrera.png);
+  background-size: cover;
 
   overflow: hidden;
   border-radius: 20px;
@@ -49,7 +52,8 @@ body {
 
 /* Modal */
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none;
+  /* Oculto por defecto */
   position: fixed;
   top: 0;
   left: 0;
@@ -76,6 +80,7 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+
 #mobile-controls {
   display: flex;
   justify-content: center;
@@ -98,22 +103,22 @@ body {
 }
 
 #top-controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 #top-controls button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 #top-controls button:active {
-    background-color: #555;
+  background-color: #555;
 }
