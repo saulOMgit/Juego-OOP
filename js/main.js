@@ -194,8 +194,8 @@ musicButton.addEventListener("click", () => {
         musicButton.textContent = "🔇 Música";
         myAudio.play();
     } else {
-        musicButton.textContent = "🎵 Música";
-        myAudio.stop();
+        musicButton.textContent = "🎵 Música";        
+        myAudio.pause();
     }
 });
 
