@@ -79,13 +79,20 @@ class Game {
 
 class Personaje {
     constructor() {
-        this.x = 200;
-        this.y = 500;
+        this.container = document.getElementById("game-container");
         this.width = 50;
         this.height = 80;
+        this.x = 200;
+        this.y = this.container.offsetHeight - this.height - 20; // 20px de margen inferior
+
         this.velocidad = 20;
         this.element = document.createElement("div");
         this.element.classList.add("personaje");
+        this.actualizarPosicion();
+    }
+
+    ajustarY() {
+        this.y = this.container.offsetHeight - this.height - 20;
         this.actualizarPosicion();
     }
 
@@ -153,6 +160,7 @@ const startButton = document.getElementById("start-button");
 startButton.addEventListener("click", () => {
     startButton.style.display = "none"; // Ocultar el botón después de iniciar
     juego.iniciar();
+    juego.personaje.ajustarY();
 });
 
 // Soporte para botones móviles
@@ -198,7 +206,7 @@ musicButton.addEventListener("click", () => {
         musicButton.textContent = "🔇 Música";
         myAudio.play();
     } else {
-        musicButton.textContent = "🎵 Música";        
+        musicButton.textContent = "🎵 Música";
         myAudio.pause();
     }
 });
