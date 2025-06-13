@@ -84,7 +84,6 @@ class Personaje {
         this.height = 80;
         this.x = 200;
         this.y = this.container.offsetHeight - this.height - 20; // 20px de margen inferior
-
         this.velocidad = 20;
         this.element = document.createElement("div");
         this.element.classList.add("personaje");
@@ -107,7 +106,7 @@ class Personaje {
 
     actualizarPosicion() {
         this.element.style.left = `${this.x}px`;
-        this.element.style.top = `${this.y}px`;  // 👈 Cambiado a top
+        this.element.style.top = `${this.y}px`;
     }
 
     colisionaCon(objeto) {
@@ -158,7 +157,7 @@ class Obstaculo {
 const juego = new Game();
 const startButton = document.getElementById("start-button");
 startButton.addEventListener("click", () => {
-    startButton.style.display = "none"; // Ocultar el botón después de iniciar
+    startButton.style.display = "none";
     juego.iniciar();
     juego.personaje.ajustarY();
 });
@@ -194,7 +193,7 @@ document.body.addEventListener("touchmove", function (e) {
 }, { passive: false });
 
 
-// Música (placeholder)
+// Música
 const musicButton = document.getElementById("music-button");
 const myAudio = document.getElementById("myAudio");
 myAudio.volume = 0.4;
