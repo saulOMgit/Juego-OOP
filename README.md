@@ -32,7 +32,7 @@ o [Acceder a traves de este enlace](https://saulomgit.github.io/Juego-OOP/)
 
 ---
 
-## 📸 Captura (opcional)
+## 📸 Captura
 
 ![captura del juego](./img/screenshot.png)
 
